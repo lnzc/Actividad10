@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,7 +18,9 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nombre"></EditText>
+            android:ems="10"
+            android:id="@+id/nombre">
+        </EditText>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +29,9 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/correo"></EditText>
+            android:ems="10"
+            android:id="@+id/correo">
+        </EditText>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,26 +40,29 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/edad"></EditText>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            android:ems="10"
+            android:id="@+id/edad">
+        </EditText>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sexo:">
+            android:text="Telefono">
         </TextView>
-        <CheckBox
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Femenino">
-        </CheckBox>
-        <CheckBox
+            android:ems="10"
+            android:id="@+id/telefono">
+        </EditText>
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Masculino">
-        </CheckBox>
+            android:id="@+id/btnEnviar"
+            android:text="Enviar"/>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
     </LinearLayout>
 </RelativeLayout>
