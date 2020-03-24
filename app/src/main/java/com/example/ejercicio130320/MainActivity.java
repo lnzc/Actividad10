@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btnAceptar=(Button)findViewById(R.id.btnEnviar);
+        Button btnLimpiar=(Button)findViewById(R.id.btnLimpiar);
         final EditText edtNombre =(EditText)findViewById(R.id.edtNombre);
         final EditText edtTelefono=(EditText)findViewById(R.id.telefono);
         final EditText edtCorreo = (EditText)findViewById(R.id.correo);
@@ -36,10 +37,31 @@ public class MainActivity extends AppCompatActivity {
                 edad=edtEdad.getText().toString();
                 correo=edtCorreo.getText().toString();
                 telefono=edtTelefono.getText().toString();
+                persona.setNombre(nombre);
+                persona.setEdad(edad);
+                persona.setMail(correo);
+                persona.setTelefono(telefono);
                 Intent i = new Intent(MainActivity.this, Main2Activity.class);
                 i.putExtra("persona",persona);
                 startActivity(i);
             }
         });
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtCorreo.setText("");
+                edtNombre.setText("");
+                edtEdad.setText("");
+                edtTelefono.setText("");
+                nombre="";
+                correo="";
+                edad="";
+                telefono="";
+                edtNombre.requestFocus();
+
+            }
+        });
     }
-}
+
+    }
+

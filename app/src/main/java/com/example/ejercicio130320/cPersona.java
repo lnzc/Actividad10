@@ -76,7 +76,7 @@ public class cPersona implements Parcelable{
     };
 
     public String getDatos(){
-        return (correo+" "+ edad+" "+nombre+" "+telefono);
+        return ("Nombre: "+nombre+" Correo: "+ correo +" Edad: "+edad+" Telefono: "+telefono);
     }
 
 
